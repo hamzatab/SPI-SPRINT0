@@ -1,0 +1,27 @@
+<div ng-controller="formationCtrl">
+	<div class="alert alert-danger alert-dismissible" role="alert" ng-click="closeAlert()" ng-if="error">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<strong>{{status}}</strong>
+	</div>
+
+	<div class="alert alert-success alert-dismissible" role="alert" ng-click="closeAlert()" ng-show="success">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<strong>{{status}}</strong>
+	</div>
+
+	<table class="table table-striped">
+		<tr>
+			<th>Code</th>
+			<th>Libellé</th>
+			<th>Numéro année</th>
+			<th>Supprimer</th>
+		</tr>
+
+		<tr ng-repeat="formation in formations">
+			<td><a href="#/formation/{{formation.codeFormation}}">{{formation.codeFormation}}</a></td>
+			<td><a href="#/formation/{{formation.codeFormation}}">{{formation.nomFormation}}</a></td>
+			<td><a href="#/formation/{{formation.codeFormation}}">{{formation.numeroAnnee}}</a></td>
+			<td><a ng-click="deleteFormation(formation.codeFormation)" role="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove" /></a></td>
+		</tr>
+	</table>
+</div>

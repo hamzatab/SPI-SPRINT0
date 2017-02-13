@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="DOSI-SPI-Sprint_0">
+		<class>fr.univbrest.dosi.bean.Candidat</class>
+		<class>fr.univbrest.dosi.bean.ElementConstitutif</class>
+		<class>fr.univbrest.dosi.bean.ElementConstitutifPK</class>
+		<class>fr.univbrest.dosi.bean.Enseignant</class>
+		<class>fr.univbrest.dosi.bean.Etudiant</class>
+		<class>fr.univbrest.dosi.bean.Formation</class>
+		<class>fr.univbrest.dosi.bean.Promotion</class>
+		<class>fr.univbrest.dosi.bean.PromotionPK</class>
+		<class>fr.univbrest.dosi.bean.UniteEnseignement</class>
+		<class>fr.univbrest.dosi.bean.UniteEnseignementPK</class>
+	</persistence-unit>
+</persistence>

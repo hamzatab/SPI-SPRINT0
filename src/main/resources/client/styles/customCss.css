@@ -1,0 +1,12 @@
+/* Custom CSS code */
+.btn-danger{
+	border-radius: 5em;
+}
+
+td a:hover{
+	color: #4286f4;
+}
+
+.maTable th{
+	width:10%;
+}
