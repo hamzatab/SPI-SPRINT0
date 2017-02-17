@@ -11,7 +11,7 @@ import org.springframework.data.repository.CrudRepository;
 import fr.univbrest.dosi.bean.Formation;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  * 7 févr. 2017
  */

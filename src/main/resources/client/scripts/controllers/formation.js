@@ -1,15 +1,17 @@
 
 //Controlleur de la page qui liste les formations
-angular.module('app').controller('formationCtrl', ['$scope', '$routeParams', 'dataFactory',
-    function ($scope, $routeParams, dataFactory) {
+angular.module('app').controller('formationCtrl', ['$scope', '$routeParams', 'dataFactory','$location',
+    function ($scope, $routeParams, dataFactory, $location) {
         $scope.status;
         $scope.formations;
-        $scope.formation;
+
         $scope.codeFormation = $routeParams.codeFormation;
         $scope.error = false;
         $scope.success = false;
 
-        
+        getFormation();
+
+
         function getFormations() {
             dataFactory.getFormations()
                 .then(function (response) {
@@ -21,15 +23,30 @@ angular.module('app').controller('formationCtrl', ['$scope', '$routeParams', 'da
                     $scope.status = 'Erreur lors de la récupération de la liste des formations: ' + error.message;
                 });
         }
+        function getFormation() {
+            dataFactory.getFormation($scope.codeFormation)
+                .then(function (response) {
+                    $scope.formation = response.data;
+                    $scope.error = false;
+                    console.log($scope.formation);
+                }, function (error) {
+                    console.log("err");
+                    $scope.success = false;
+                    $scope.error = true;
+                    $scope.status = 'Erreur lors de la récupération de la liste des formations: ' + error.message;
+                });
+        }
 
         $scope.updateFormation = function () {
-            dataFactory.updateFormation(formation)
+            dataFactory.updateFormation($scope.formation)
                 .then(function (response) {
+
                     $scope.status = 'Mise à jour de la formation effectuée!';
-                    this.getFormations();
                     $scope.error = false;
                     $scope.success = true;
                     getFormations();
+                    $location.path("/formation/"+$scope.formation.codeFormation);
+                   // console.log($location.path);
                 }, function (error) {
                     $scope.success = false;
                     $scope.error = true;
@@ -38,13 +55,14 @@ angular.module('app').controller('formationCtrl', ['$scope', '$routeParams', 'da
         };
 
         $scope.insertFormation = function () {
-            dataFactory.insertCustomer(formation)
+            dataFactory.insertFormation($scope.formation)
                 .then(function (response) {
                     $scope.status = 'Insertion de la formation effectuée!';
-                    this.getFormations();
+
                     $scope.error = false;
                     $scope.success = true;
                     getFormations();
+                    $location.path("/formations/");
                 }, function (error) {
                     $scope.success = false;
                     $scope.error = true;

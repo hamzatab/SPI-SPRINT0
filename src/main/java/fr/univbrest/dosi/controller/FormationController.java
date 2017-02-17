@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.google.common.base.Strings;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  *         9 févr. 2017
  */
@@ -66,10 +66,10 @@ public class FormationController
 	}
 	
 	@ApiOperation(value = "", notes = "Permet de mettre à jour les données d'une formation.", response = FormationComplete.class, tags={  })
-	@RequestMapping(value = "/{codeFormation}", method = RequestMethod.PUT, produces = { "application/json" })
-	public FormationComplete updateFormation(@PathVariable final String codeFormation, @Valid @RequestBody FormationComplete newFormation)
+	@RequestMapping(value = "", method = RequestMethod.PUT, produces = { "application/json" })
+	public FormationComplete updateFormation(@Valid @RequestBody FormationComplete newFormation)
 	{
-		validerFormationAMettreAJour(codeFormation, newFormation);
+		//aliderFormationAMettreAJour(codeFormation, newFormation);
 		
 		return formationBusiness.createFormation(newFormation);
 	}

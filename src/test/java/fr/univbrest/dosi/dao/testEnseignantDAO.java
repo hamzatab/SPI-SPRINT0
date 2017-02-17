@@ -18,7 +18,7 @@ import fr.univbrest.dosi.AppTestConfig;
 import fr.univbrest.dosi.bean.Enseignant;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  *         8 févr. 2017
  */

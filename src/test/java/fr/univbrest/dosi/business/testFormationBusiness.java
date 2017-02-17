@@ -19,7 +19,7 @@ import fr.univbrest.dosi.dao.FormationDAO;
 import fr.univbrest.dosi.model.FormationComplete;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  *         8 févr. 2017
  */

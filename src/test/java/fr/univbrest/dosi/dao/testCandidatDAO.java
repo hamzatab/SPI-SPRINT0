@@ -21,7 +21,7 @@ import fr.univbrest.dosi.AppTestConfig;
 import fr.univbrest.dosi.bean.Candidat;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  * 7 févr. 2017
  */

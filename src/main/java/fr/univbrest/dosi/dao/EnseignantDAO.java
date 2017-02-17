@@ -10,7 +10,7 @@ import org.springframework.data.repository.CrudRepository;
 import fr.univbrest.dosi.bean.Enseignant;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  * 7 févr. 2017
  */

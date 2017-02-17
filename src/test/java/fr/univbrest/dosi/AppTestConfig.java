@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  * 7 févr. 2017
  */

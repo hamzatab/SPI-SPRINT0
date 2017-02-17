@@ -17,7 +17,7 @@ import fr.univbrest.dosi.mapper.MapperFormation;
 import fr.univbrest.dosi.model.FormationComplete;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  *         8 févr. 2017
  */

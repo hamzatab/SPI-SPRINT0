@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import fr.univbrest.dosi.AppTestConfig;
 
 /**
- * @author Chobaz
+ * @author ChobTabassametaz
  *
  * 8 févr. 2017
  */

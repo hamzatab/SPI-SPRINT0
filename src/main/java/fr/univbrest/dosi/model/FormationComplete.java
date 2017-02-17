@@ -6,7 +6,7 @@ package fr.univbrest.dosi.model;
 import java.util.Date;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  *         12 févr. 2017
  */

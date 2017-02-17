@@ -1,0 +1,57 @@
+<div id="mydiv" ng-controller="formationCtrl">
+    <div class="alert alert-danger alert-dismissible" role="alert" ng-click="closeAlert()" ng-if="error">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{status}}</strong>
+    </div>
+
+    <div class="alert alert-success alert-dismissible" role="alert" ng-click="closeAlert()" ng-show="success">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{status}}</strong>
+    </div>
+
+    <table class="table table-striped maTable">
+        <tr>
+            <th>Code formation</th>
+            <td colspan="4"><input  ng-model="formation.codeFormation" type="text" class="form-control" required/></td>
+        </tr>
+
+        <tr>
+            <th>Nom formation</th>
+            <td colspan="4"><input ng-model="formation.nomFormation" type="text" class="form-control" required/></td>
+        </tr>
+
+        <tr>
+            <th>Type de diplome</th>
+            <td colspan="4" ><input ng-model="formation.diplome" type="text" class="form-control" required/></td>
+
+        </tr>
+
+        <tr>
+            <th>Double diplome</th>
+            <td colspan="4">
+                <select ng-model="formation.estUnDoubleDiplome">
+                    <option ng-value="true">Oui</option>
+                    <option ng-value="false">Non</option>
+                </select></td>
+
+        </tr>
+
+        <tr>
+            <th>Numéro année</th>
+            <td colspan="4"><input ng-model="formation.numeroAnnee" type="number" class="form-control" required/></td>
+        </tr>
+
+        <tr>
+            <th>Accréditation</th>
+            <td width="30">Du</td>
+            <td><input ng-model="formation.debutAccreditation" type="date" class="form-control" required/></td>
+            <td width="30">Au</td>
+            <td><input ng-model="formation.finAccreditation" type="date" class="form-control" required/></td>
+        </tr>
+
+        <tr>
+            <th><a ng-click="insertFormation(formation)"  role="button" class="btn btn-info"><span class="glyphicon glyphicon-ok" /></a></th>
+            <td colspan="4"></td>
+        </tr>
+    </table>
+</div>

@@ -10,7 +10,7 @@ import fr.univbrest.dosi.bean.Etudiant;
 import fr.univbrest.dosi.bean.Promotion;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  * 7 févr. 2017
  */

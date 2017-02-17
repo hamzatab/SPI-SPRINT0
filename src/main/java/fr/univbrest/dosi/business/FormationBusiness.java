@@ -8,7 +8,7 @@ import java.util.Collection;
 import fr.univbrest.dosi.model.FormationComplete;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  * 8 févr. 2017
  */

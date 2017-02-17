@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  *         12 févr. 2017
  */

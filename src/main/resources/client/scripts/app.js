@@ -16,8 +16,7 @@
             // Système de routage
             $routeProvider
                 .when('/accueil', {
-                    templateUrl: '/views/accueil.html',
-                    controller: 'accueilCtrl'
+                    templateUrl: '/views/accueil.html'
                 })
                 .when('/formations', {
                     templateUrl: '/views/formations.html',
@@ -27,11 +26,40 @@
                     templateUrl: '/views/formationDetails.html',
                     controller: 'formationCtrl'
                 })
-                .otherwise({
+                .when('/edit/:codeFormation', {
+                    templateUrl: '/views/edit.html',
+                    controller: 'formationCtrl'
+                })
+                .when('/addformation', {
+                templateUrl: '/views/addformation.html',
+                controller: 'formationCtrl'
+                }).when('/signin',{
+                templateUrl: '/views/signin.html',
+                notLoggedNeeded : true
+                }).when('/signup',{
+                templateUrl: '/views/signup.html',
+                notLoggedNeeded : true
+                }).otherwise({
                     redirectTo: '/accueil'
                 });
         }
-    ]);
+    ]).run(function ($rootScope, $route, $location, signinFactory) {
+        $rootScope.$on("$routeChangeStart", function (event, to) {
+            if (to.notLoggedNeeded) {
+                console.log("NOT LOGGED");
+                return;
+            }
+            else {
+                signinFactory.getUser().success(function (data) {
+                    if (data) {
+                        event.preventDefault();
+                    } else {
+                        $location.path("/signin");
+                    }
+                });
+            }
+        });
+    });
 
 }).call(this);
 

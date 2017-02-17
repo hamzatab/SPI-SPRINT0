@@ -13,7 +13,7 @@ import fr.univbrest.dosi.bean.Formation;
 import fr.univbrest.dosi.model.FormationComplete;
 
 /**
- * @author Chobaz
+ * @author Tabassamet
  *
  *         12 févr. 2017
  */
